@@ -20,8 +20,13 @@ mainClassName = 'App'
 dependencies {
 
     // Use JUnit test framework
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 }
+//编译JAVA文件时采用UTF-8
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
 
 // In this section you declare where to find the dependencies of your project
 repositories {
